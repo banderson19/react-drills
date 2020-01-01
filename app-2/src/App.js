@@ -14,10 +14,8 @@ class App extends Component {
   render() {
     let foodsToDisplay = this.state.foods.map((e, index) => {
       return <h2 key={index}>{e}</h2>
-    });
-    return (
-      <div className="App">{foodsToDisplay}</div>
-    )
+    })
+    return <div className="App">{foodsToDisplay}</div>
   } 
 }
 

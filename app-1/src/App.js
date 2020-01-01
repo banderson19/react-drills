@@ -5,23 +5,27 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state = {
-      message: ""
-    };
+   this.state = {
+     input: ""
+   }
   }
 
-  handleChange(value) {
-    this.setState({ message: value });
+  handleInput(value) {
+    this.setState({input: value})
   }
 
-  render () {
+  render() {
     return (
-      <div className='App'>
-        <input onChange={e => this.handleChange(e.target.value)} type='text'/>
-        <p>{this.state.message}</p>
+      <div className="App">
+        <input onChange = { e => this.handleInput(e.target.value)} type='text'/>
+        <p>{this.state.input}</p>
       </div>
-    );
+      
+    )
   }
+   
+
+
 }
 
 export default App;
